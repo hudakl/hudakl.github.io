@@ -1,13 +1,19 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
   <body>
-    <a-scene background="color: #ECECEC">
-	  <a-assets>
-		<a-asset-item id="tardisModel" src="https://raw.githubusercontent.com/hudakl/aframe/main/TARDIS.gltf"></a-asset-item>
-	  </a-assets>
-	  <a-entity gltf-model="#tardisModel" modify-materials></a-entity>
-	</a-scene>
+    <model-viewer 
+		alt="The TARDIS" 
+		src="https://raw.githubusercontent.com/hudakl/aframe/main/TARDIS.gltf" 
+		ar 
+		ar-modes="webxr scene-viewer quick-look" 
+		environment-image="shared-assets/environments/moon_1k.hdr" 
+		poster="shared-assets/models/NeilArmstrong.webp" 
+		seamless-poster 
+		shadow-intensity="1" 
+		camera-controls>
+	</model-viewer>
   </body>
 </html>
