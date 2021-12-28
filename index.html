@@ -3,9 +3,11 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-sky src="https://raw.githubusercontent.com/hudakl/aframe/main/TheCellar360HiResDenoised.jpg" rotation="0 -130 0"></a-sky>
-
-    </a-scene>
+    <a-scene background="color: #ECECEC">
+	  <a-assets>
+		<a-asset-item id="tardisModel" src="https://raw.githubusercontent.com/hudakl/aframe/main/TARDIS.gltf"></a-asset-item>
+	  </a-assets>
+	  <a-entity gltf-model="#tardisModel" modify-materials></a-entity>
+	</a-scene>
   </body>
 </html>
